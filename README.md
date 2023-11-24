@@ -1,6 +1,6 @@
 # Milter 2 THOR-Thunderstorm - Postfix Milter service for scanning with THOR Thunderstorm
 
-![image](https://github.com/NextronSystems/postfix2thunderstorm/assets/8741929/470abb8e-1b44-43df-8c84-dee3de92cf1b)
+![image](https://github.com/NextronSystems/postfix2thunderstorm/assets/8741929/8a79d757-0ae5-40cd-bd67-6ebb8e22dd02)
 
 The Postfix mail server is a popular and highly configurable Mail Transfer Agent (MTA) used for routing and delivering email messages within a network or across the internet. Similar to the Sendmail MTA, it can use Milter (protocol) to scan incoming emails for spam or malware. On incoming emails, compatible MTAs use the Milter protocol to communicate with an extra service, which also speaks the Milter protocol. This extra service scans the email and responds with its findings. Based on the response of the extra service the MTA can filter, discard, or quarantine the email. `postfix2thunderstorm` is a free and open-source implementation of a Milter Service which allows you to scan emails using THOR Thunderstorm. Read more about this in the following [blog post](https://www.nextron-systems.com/2023/11/14/supercharged-postfix)
 
