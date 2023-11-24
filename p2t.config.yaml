@@ -1,0 +1,8 @@
+log_filepath: ./postfix2thunderstorm.log                                        # log filepath
+max_filesize_bytes: 50_000_000                                                  # max size in bytes
+active_mode: true                                                               # if true mails are quarantied based on 'quarantine_expression', else its in 'passive-mode' (just logging)
+milter_host: localhost                                                          # host to listen on, postfix will connect here
+milter_port: 11337                                                              # port to listen on
+thorthunderstorm_url: http://localhost:8080/api/check                           # Thor Thunderstorm endpoint
+quarantine_expression: one(Matches, {.Subscore > 90}) or FullMatch.Score > 90   # Expression (https://github.com/antonmedv/expr) used for deciding if email should be quarantined
+# Objects (e.g., '.Subscore' and FullMatch) to work with can be found in "milter.go:16"
